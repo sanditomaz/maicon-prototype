@@ -1,11 +1,4 @@
 import ReactDOM from "react-dom";
-import App from "./App.js";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
+import App from "./App";
 
-ReactDOM.render(
-  <DndProvider backend={HTML5Backend}>
-    <App />
-  </DndProvider>,
-  document.querySelector(".root")
-);
+ReactDOM.render(<App />, document.querySelector(".root"));
