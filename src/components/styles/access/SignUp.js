@@ -1,19 +1,22 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
+  const navigate = useNavigate();
+
   const [emailLogin, setEmailLogin] = useState(false);
   return (
     <Main>
       <nav>
-        <div className="Logo">L</div>
+        <div className="Logo" onClick={() => navigate("/homepage")}>L</div>
         {!emailLogin ? (
           <>
             <div className="Login">Google</div>
             <div className="Login" onClick={() => setEmailLogin(true)}>
               Email
             </div>
-            <p>Login</p>
+            <p onClick={() => navigate("/login")} >Login</p>
           </>
         ) : (
           <>
@@ -24,7 +27,7 @@ export default function SignUp() {
               className="Login"
               placeholder="Confirmar Senha"
             />
-            <p>Login</p>
+            <p onClick={() => navigate("/login")}>Login</p>
           </>
         )}
       </nav>

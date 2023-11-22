@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Caroussel from './Carousel.js';
+import { useNavigate } from "react-router-dom";
 
 export default function Homepage() {
+    const navigate = useNavigate();
 
     return(
         <Main>
@@ -10,11 +12,15 @@ export default function Homepage() {
                     <div className="Logo">L</div>
 
                     <div className="Menu">
-                        <div>Empresa</div>
-                        <div>Serviços</div>
+                        <div onClick={() => navigate("/homepage")} >Empresa</div>
+                        <div onClick={() => navigate("/")}>Serviços</div>
                         <div>Depoimentos</div>
-                        <div>Login</div>
-                        <div>Cadastro</div>
+                        
+                         <div onClick={() => navigate("/login")} >  Login    </div> 
+                      
+                        
+                           <div onClick={() => navigate("/signup")}> Cadastro  </div> 
+                        
                     </div>
 
                 </header>
@@ -117,6 +123,7 @@ const Main = styled.main`
         justify-content: space-around;
      //   gap: 30px;
       //  background-color: brown;
+
       }
 
       .Menu > div{
@@ -127,6 +134,7 @@ const Main = styled.main`
       color:  #194375;
       margin-bottom: 10px;
       cursor: pointer;
+      
     }
 
     .Menu > div:hover{
@@ -139,7 +147,6 @@ const Main = styled.main`
         border-radius: 10px;
     }
 
-      
     }
 
     .Central{

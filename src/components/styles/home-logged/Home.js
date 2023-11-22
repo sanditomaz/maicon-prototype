@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+    const navigate = useNavigate();
+
   return (
     <Main>
       <nav>
         <header>
-          <div className="Logo">L</div>
+          <div onClick={() => navigate("/homepage")} className="Logo">L</div>
 
           <div className="CompanysName">
             <div> L. Empresa Especialista em Engenharia </div>
