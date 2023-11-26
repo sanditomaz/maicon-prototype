@@ -121,7 +121,8 @@ const Main = styled.main`
       display: flex;
       align-items: flex-start;
       justify-content: flex-start;
-      width: 100%;
+      width: 90%;
+      //background-color: red;
 
       .MenuBar {
         display: flex;
@@ -130,11 +131,22 @@ const Main = styled.main`
         justify-content: flex-start;
         max-width: 300px;
         width: 100%;
-        height: 100vh;
+       // height: 100vh;
         border-radius: 12px;
-        gap: 40px;
+        gap: 30px;
         margin-top: 35px;
         background-color: #eff1f5;
+      }
+
+      .MenuBar > div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 54px;
+        border-radius: 6px;
+        background-color: #dbe0e9;
       }
 
       .Content {
@@ -143,7 +155,7 @@ const Main = styled.main`
         justify-content: center;
         width: 100%;
         margin-top: 35px;
-        //       background-color: blue;
+       //   background-color: blue;
 
         .Form {
           display: flex;

@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 export default function Caroussel () {
     return(
-        <Carousel width={1230} dynamicHeight='true' autoPlay='true' transitionTime={1} swipeable='true' infiniteLoop='true' >
+        <Carousel dynamicHeight='true' autoPlay='true' transitionTime={1} swipeable='true' infiniteLoop='true' >
                 <div>
                     <img src="/image/imageeng01.jpg" />
                    

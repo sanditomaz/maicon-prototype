@@ -42,7 +42,8 @@ const Main = styled.main`
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #FBFBFB;
+  background: rgb(30,41,57);
+background: linear-gradient(180deg, rgba(30,41,57,1) 0%, rgba(147,170,193,1) 56%, rgba(69,148,225,1) 100%);
   overflow-y: scroll;
   //  background-color: yellow;
 
@@ -66,6 +67,7 @@ const Main = styled.main`
       height: 150px;
       border: 2px solid #194375;
       box-shadow: inset 0 0 0 2px #cbd1daa4;
+      background-color: #eff1f5;
       border-radius: 50%;
       font-family: "brandon-grotesque", sans-serif;
       font-weight: 800;
@@ -81,7 +83,7 @@ const Main = styled.main`
         align-items: center;
         justify-content: center;
         padding: 8px;
-        background-color: #eff1f5;
+      
         //border-radius: 50px;
     }
 
@@ -104,6 +106,7 @@ const Main = styled.main`
       font-size: 21px;
       cursor: pointer;
       color: #194375;
+      background-color: #eff1f5;
     }
 
     .Login:hover{
@@ -111,7 +114,7 @@ const Main = styled.main`
         align-items: center;
         justify-content: center;
         padding: 3px;
-        background-color: #eff1f5;
+      
     }
 
     p {
@@ -130,6 +133,7 @@ const Main = styled.main`
         justify-content: center;
         padding: 3px;
         background-color: #eff1f5;
+        border-radius: 6px;
     }
 
     .Login::placeholder {
