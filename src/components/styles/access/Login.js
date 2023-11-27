@@ -12,7 +12,7 @@ export default function Login() {
         {!emailLogin ? (
           <>
             <div className="Login">Google</div>
-            <div className="Login" onClick={() => setEmailLogin(true)}>
+            <div className="Login" onClick={() => navigate("/")}>
               Email
             </div>
             <p onClick={()=> navigate("/signup") }>Cadastrar</p>

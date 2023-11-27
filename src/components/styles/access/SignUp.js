@@ -22,7 +22,7 @@ export default function SignUp() {
           <>
             <input type="email" className="Login" placeholder="Email" />
             <input type="password" className="Login" placeholder="Senha" />
-            <input
+            <input onClick={() => navigate("/cadastro")}
               type="password"
               className="Login"
               placeholder="Confirmar Senha"

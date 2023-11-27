@@ -1,49 +1,69 @@
+
 import styled from "styled-components";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
+import TravelExploreIcon from '@mui/icons-material/TravelExplore';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import SendIcon from '@mui/icons-material/Send';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import QueryStatsIcon from '@mui/icons-material/QueryStats';
+import WidgetsIcon from '@mui/icons-material/Widgets';
+import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { useNavigate } from "react-router-dom";
+import { Sidebar } from 'flowbite-react';
 
 export default function CompanyRegistration() {
+    const navigate = useNavigate();
+
   return (
     <Main>
       <nav>
+    
+      <div className="MenuBar">
+            <div onClick={() => navigate("/") } style={{ paddingTop: "35px" }}><MarkChatUnreadIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/ex02") }><TravelExploreIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/ex03") }><ContactPhoneIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/ex04") }><SendIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/ex05") }><MenuBookIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/ex06") }><QueryStatsIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/ex07") }><WidgetsIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/ex08") }><SettingsIcon  sx={{ color: "#ffffff" }} /></div>
+            <div onClick={() => navigate("/homepage")}> <LogoutIcon fontSize="large" sx={{ color: "#ffffff" }} /> </div>
+          </div>
+    <div className="SecondSide"> 
         <header>
-          <div className="Logo">L</div>
 
           <div className="CompanysName">
-            <div> L. Empresa Especialista em Engenharia </div>
+            <div> Realize o Cadastro da Empresa Abaixo</div>
           </div>
         </header>
 
         <div className="Central">
-          <div className="MenuBar">
-            <div style={{ paddingTop: "35px" }}>MPS</div>
-            <div>MRI</div>
-            <div>CPR</div>
-            <div>A&G</div>
-            <div>Segurança</div>
-            <div> <LogoutIcon fontSize="large" /> </div>
-          </div>
+        
 
-          <div className="Content">
+        <div className="Content">
             <div className="Form">
-            <div> <input placeholder="Nome da empresa" /> <span>< KeyboardArrowDownIcon/> </span> </div>
-            <div> <input placeholder="Endereço da empresa" /> <span>< KeyboardArrowDownIcon/> </span> </div>
+            <div> <input placeholder="Nome da empresa" /> </div>
+            <div> <input placeholder="Endereço da empresa" /> </div>
 
-            <div> <input placeholder="CNPJ" /> <span>< KeyboardArrowDownIcon/> </span> </div>
+            <div> <input placeholder="CNPJ" /> </div>
 
-            <div> <input placeholder="Área de atendimento" /> <span>< KeyboardArrowDownIcon/> </span> </div>
+            <div> <input placeholder="Área de atendimento" /> </div>
 
-            <div> <input placeholder="Materiais e soluções" /> <span>< KeyboardArrowDownIcon/> </span> </div>
+            <div> <input placeholder="Materiais e soluções" /> </div>
 
-            <div> <input placeholder="Engenharia e negócios" /> <span>< KeyboardArrowDownIcon/> </span> </div>
+            <div> <input placeholder="Engenharia e negócios" /> </div>
 
-            <div> <input placeholder="Parceiros" /> <span>< KeyboardArrowDownIcon/> </span> </div>
+            <div> <input placeholder="Parceiros" /> </div>
 
-            <div> <input placeholder="Clique para mais" /> <span>< KeyboardArrowDownIcon/> </span> </div>
+            <div> <input placeholder="Clique para mais" /> </div>
 
             </div>
           </div>
+
         </div>
+      </div>
       </nav>
     </Main>
   );
@@ -62,69 +82,39 @@ const Main = styled.main`
 
   nav {
     width: 100%;
-    //height: 100%;
+    height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    //   background-color: pink;
+    justify-content:flex-start;
+  //     background-color: pink;
+
+       .SecondSide{
+        width: 100%;
+        height: 100vh;
 
     header {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      width: 90%;
-      padding: 15px 0 0 0;
-      border-bottom: 2px solid #194375;
-      //   background-color: blue;
+      width: 100%;
+    //  border-bottom: 2px solid #194375;
+        // background-color: blue;
 
-      .Logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80px;
-        height: 80px;
-        border: 2px solid #194375;
-        box-shadow: inset 0 0 0 2px #cbd1daa4;
-        border-radius: 50%;
-        font-family: "brandon-grotesque", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-        font-size: 50px;
-        color: #194375;
-        margin-bottom: 10px;
-        cursor: pointer;
-        margin-left: 10px;
-      }
-
-      .Logo:hover {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px;
-        background-color: #eff1f5;
-        border-radius: 50px;
-      }
 
       .CompanysName {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        padding-bottom: 10px;
+        padding: 10px 0;
         //  background-color: pink;
 
         font-family: "brandon-grotesque", sans-serif;
-        font-weight: 400;
+        font-weight: 600;
         font-style: normal;
-        font-size: 50px;
+        font-size: 30px;
         color: #194375;
         cursor: pointer;
-      }
-
-      .CompanysName:hover {
-        padding: 0 0 15px 0;
-       // background-color: #eff1f5;
       }
     }
 
@@ -133,35 +123,22 @@ const Main = styled.main`
       align-items: flex-start;
       justify-content: flex-start;
       width: 100%;
+  //    background-color: red;
 
-      .MenuBar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        max-width: 300px;
-        width: 100%;
-        height: 100vh;
-        border-radius: 12px;
-        gap: 40px;
-        margin-top: 35px;
-        background-color: #eff1f5;
-      }
 
       .Content {
         display: flex;
         align-items: flex-start;
         justify-content: center;
         width: 100%;
-        margin-top: 35px;
-        //       background-color: blue;
+       //   background-color: blue;
 
         .Form {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: flex-start;
-          width: 80%;
+          width: 99%;
           min-height: 500px;
           height: 100%;
           border-radius: 12px;
@@ -205,9 +182,34 @@ const Main = styled.main`
                 cursor: pointer;
             }
           }
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "brandon-grotesque", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        color: #c40b0b;
+        cursor: pointer;
         }
       }
     }
+  }
+
+
+    .MenuBar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 70px;
+        height: 100vh;
+        gap: 30px;
+        background-color: #1e2939;
+      }
+
+   
 
     .MenuBar > div {
       font-family: "brandon-grotesque", sans-serif;

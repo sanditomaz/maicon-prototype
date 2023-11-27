@@ -1,4 +1,6 @@
+
 import styled from "styled-components";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MarkChatUnreadIcon from '@mui/icons-material/MarkChatUnread';
 import TravelExploreIcon from '@mui/icons-material/TravelExplore';
 import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
@@ -33,7 +35,7 @@ export default function Home() {
         <header>
 
           <div className="CompanysName">
-            <div>  Processo de  Engenharia MRI</div>
+            <div>  Processo de  Engenharia e Configurações</div>
           </div>
         </header>
 
@@ -42,7 +44,7 @@ export default function Home() {
 
           <div className="Content">
             <div className="Form">
-                <div> 01 - Aqui vai rodar toda a parte de um tipo específico da aplicação.</div>
+                <div onClick={ () => navigate("/cadastro")}> 08 - Aqui vai rodar toda a parte de um tipo específico da aplicação. <br /> <br /> Incluindo Alteração de Cadastro.</div>
             </div>
           </div>
         </div>
